@@ -1,12 +1,10 @@
 import { React, useState } from 'react';
 // import Form from 'react-bootstrap/Form';
 import '../styles/Radiobutton.scss';
-import Background from '../images/pokeball2.png';
 
 function RadioButton(props) {
     // console.log('RadioButton created with id:', props.id);
 
-    console.log(Background);
     return (
         <div className="col-sm-12 col-md-6 mt-3">
             <input
