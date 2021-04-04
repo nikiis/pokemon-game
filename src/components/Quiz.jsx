@@ -10,7 +10,6 @@ import EndGameScreen from './EndGameScreen';
 import { TOTAL_SCORE } from '../constants';
 
 function Quiz() {
-    const [isError, setIsError] = useState(false);
     const [score, setScore] = useState(0);
     const [attemptCount, setAttemptCount] = useState(0);
 
@@ -34,24 +33,9 @@ function Quiz() {
         // get a list of 4 pokemon names and the first ones image
         const answers = getAnswerOptions(leftPokemonIds.current, allPokemonIds.current, 3);
         setPokemonOptions(answers);
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [attemptCount]);
-
-    const fetchPokemon = async (id) => {
-        try {
-            const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
-            handleError(response);
-            return response.data;
-        } catch (err) {
-            console.log(err);
-            setIsError(true);
-        }
-    };
-
-    function handleError(err) {
-        if (err.status < 200 || 299 < err.status) {
-            setIsError(true);
-        }
-    }
 
     function getAnswerOptions(leftPokemons, allPokemons, othersLength) {
         if (leftPokemons.length === 0) return null;
@@ -69,11 +53,26 @@ function Quiz() {
         const toFetch = [answers.toGuess, ...answers.others].map((item) => fetchPokemon(item));
         Promise.all(toFetch).then((pokemons) => {
             setToGuess(pokemons[0]);
-            console.log('toGuess name:', pokemons[0]?.name);
             setAllOptions(shuffleArray(pokemons));
 
             setEnableButtons(true);
         });
+    }
+
+    const fetchPokemon = async (id) => {
+        try {
+            const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+            handleError(response);
+            return response.data;
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
+    function handleError(err) {
+        if (err.status < 200 || 299 < err.status) {
+            console.log(err);
+        }
     }
 
     function handleAnswerAttempt(id) {

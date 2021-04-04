@@ -1,10 +1,8 @@
-import { React, useState } from 'react';
+import { React } from 'react';
 // import Form from 'react-bootstrap/Form';
 import '../styles/Radiobutton.scss';
 
 function RadioButton(props) {
-    // console.log('RadioButton created with id:', props.id);
-
     return (
         <div className="col-sm-12 col-md-6 mt-3">
             <input
@@ -15,7 +13,6 @@ function RadioButton(props) {
                 disabled={!props.enabled}
                 onClick={() => {
                     props.handleAnswerAttempt(props.id);
-                    console.log('Clicked radio button');
                 }}
             />
             <label htmlFor={props.id}>{props.answerText}</label>
