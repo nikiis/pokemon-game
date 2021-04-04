@@ -1,0 +1,22 @@
+$myblack: #232900;
+$mywhite: #f6f6f6;
+$neongreen: #c7ffd8;
+
+button{
+    font-family: 'Press Start 2P', cursive !important;
+    border: none;
+    outline: none;
+    background-color: $mywhite;
+    border-collapse: collapse;
+    border-radius: 50px !important;
+    padding: 10px 30px;
+    box-shadow: 5px 5px $neongreen;
+    color: $myblack;
+    transition: all 0.5s;
+}
+
+button:hover{
+    background-color: $neongreen;
+    box-shadow: 5px 5px $mywhite;
+    color: $myblack;
+}

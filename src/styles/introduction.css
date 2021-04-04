@@ -1,0 +1,46 @@
+.intropage {
+  min-height: 100vh;
+  background-color: #232900;
+  background-image: url("../images/asfalt-light.png");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.intropage h1 {
+  color: white;
+  font-size: 3rem;
+  width: 80%;
+}
+
+.intropage p {
+  margin-top: 10px;
+  font-size: large;
+  text-align: center;
+}
+
+.intropage a {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #f6f6f6;
+  color: #232900;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 10px 30px;
+  -webkit-box-shadow: 5px 5px #c7ffd8;
+          box-shadow: 5px 5px #c7ffd8;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.intropage a:hover {
+  background-color: #232900;
+  color: #c7ffd8;
+}
+/*# sourceMappingURL=introduction.css.map */

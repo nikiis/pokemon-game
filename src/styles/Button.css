@@ -1,0 +1,22 @@
+button {
+  font-family: 'Press Start 2P', cursive !important;
+  border: none;
+  outline: none;
+  background-color: #f6f6f6;
+  border-collapse: collapse;
+  border-radius: 50px !important;
+  padding: 10px 30px;
+  -webkit-box-shadow: 5px 5px #c7ffd8;
+          box-shadow: 5px 5px #c7ffd8;
+  color: #232900;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+button:hover {
+  background-color: #c7ffd8;
+  -webkit-box-shadow: 5px 5px #f6f6f6;
+          box-shadow: 5px 5px #f6f6f6;
+  color: #232900;
+}
+/*# sourceMappingURL=Button.css.map */

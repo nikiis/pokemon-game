@@ -1,0 +1,31 @@
+$myblack: #232900;
+$mywhite: #f6f6f6;
+$neongreen: #c7ffd8;
+$mainfont: 'Press Start 2P', cursive;
+$secondaryFont: 'Montserrat', sans-serif;
+
+input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+  }
+
+label{
+    display: inline-block;
+    background-color: $mywhite;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+    color: $myblack;
+    text-transform: capitalize;
+    font-family: $mainfont;
+    font-size: 80%;
+    border: 2px solid $neongreen;
+    user-select: none;
+}
+
+label:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
